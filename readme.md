@@ -15,7 +15,8 @@ Buon lavoro!
 - 2 Chiedo all'utente il km da percorrere
 - 3 Chiediamo all'utente l'età
 - 4 Calcolo il prezzo del biglietto
-- 5 Controllo se l'utente ha diritto a uno sconto
-- 6 Se l'utente ne ha diritto applico lo sconto
-- 7 Trasformo il prezzo con solo 2 decimi
-- 8 Inserisco il prezzo nella pagina
+- 5 Controllo se l'utente ha scritto solo numeri
+- 6 Controllo se l'utente ha diritto a uno sconto
+- 7 Se l'utente ne ha diritto applico lo sconto
+- 8 Trasformo il prezzo con solo 2 decimi
+- 9 Inserisco il prezzo nella pagina
