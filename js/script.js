@@ -27,7 +27,6 @@ console.log('La tua età è:', userAge, 'anni');
 
 // - 4 Calcolo il prezzo del biglietto
 let price = userKm * 0.21;
-price = price.toFixed(2);
 console.log('Il prezzo del biglietto è di: ', price, '€');
 
 // - 5 Controllo se l'utente ha diritto a uno sconto
@@ -42,7 +41,7 @@ if (userAge < 18 || userAge > 65) {
 console.log('Il prezzo del biglietto è di: ', price, '€');
 
 // - 7 Trasformo il prezzo con solo 2 decimi
-price = price.toFixed(2);
+price = parseFloat(price.toFixed(2));
 console.log('Il prezzo del biglietto è di: ', price, '€');
 
 // - 8 Inserisco il prezzo nella pagina
