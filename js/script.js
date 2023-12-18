@@ -22,4 +22,5 @@ const userKm = prompt('Quanti km devi percorrere?', '35');
 console.log('Km da percorrere:', userKm);
 
 // - 3 Chiediamo all'utente l'età
-const 
+const userAge = prompt('Quanti anni hai?', '28');
+console.log('La tua età è:', userAge, 'anni');
