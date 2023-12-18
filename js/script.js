@@ -7,10 +7,11 @@ Scompongo il problema
 - 2 Chiedo all'utente il km da percorrere
 - 3 Chiediamo all'utente l'età
 - 4 Calcolo il prezzo del biglietto
-- 5 Controllo se l'utente ha diritto a uno sconto
-- 6 Se l'utente ne ha diritto applico lo sconto
-- 7 Trasformo il prezzo con solo 2 decimi
-- 8 Inserisco il prezzo nella pagina
+- 5 Controllo se l'utente ha scritto solo numeri
+- 6 Controllo se l'utente ha diritto a uno sconto
+- 7 Se l'utente ne ha diritto applico lo sconto
+- 8 Trasformo il prezzo con solo 2 decimi
+- 9 Inserisco il prezzo nella pagina
 */
 
 // - 1 Prendo l'elemento dal DOM
@@ -29,21 +30,30 @@ console.log('La tua età è:', userAge, 'anni');
 let price = userKm * 0.21;
 console.log('Il prezzo del biglietto è di: ', price, '€');
 
-// - 5 Controllo se l'utente ha diritto a uno sconto
-if (userAge < 18 || userAge > 65) {
-    if (userAge < 18) {
-        price = price - (price * 0.2);
-    } else if (userAge > 65) {
-        price = price - (price * 0.4);
+// - 5 Controllo se l'utente ha scritto solo numeri
+if (isNaN(userAge) || isNaN(userKm)) {
+    alert('Devi inserire un numero')
+} else {
+
+    // - 6 Controllo se l'utente ha diritto a uno sconto
+    if (userAge < 18 || userAge > 65) {
+
+        // - 7 Se l'utente ne ha diritto applico lo scont
+        if (userAge < 18) {
+            price = price - (price * 0.2);
+        } else if (userAge > 65) {
+            price = price - (price * 0.4);
+        }
     }
+
+    console.log('Il prezzo del biglietto è di: ', price, '€');
+
+    // - 8 Trasformo il prezzo con solo 2 decimi
+    price = parseFloat(price.toFixed(2));
+    console.log('Il prezzo del biglietto è di: ', price, '€');
+
+    // - 9 Inserisco il prezzo nella pagina
+    paragrph.innerHTML = `Il prezzo del biglietto è di: <strong>${price}</strong> €`;
 }
 
-console.log('Il prezzo del biglietto è di: ', price, '€');
-
-// - 7 Trasformo il prezzo con solo 2 decimi
-price = parseFloat(price.toFixed(2));
-console.log('Il prezzo del biglietto è di: ', price, '€');
-
-// - 8 Inserisco il prezzo nella pagina
-paragrph.innerHTML = `Il prezzo del biglietto è di: <strong>${price}</strong> €`;
 
