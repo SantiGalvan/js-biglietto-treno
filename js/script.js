@@ -18,5 +18,8 @@ const paragrph = document.getElementById('content');
 console.log('id: ', paragrph);
 
 // - 2 Chiedo all'utente il km da percorrere
-const km = prompt('Quanti km devi percorrere?', '35');
-console.log('Km da percorrere:', km);
+const userKm = prompt('Quanti km devi percorrere?', '35');
+console.log('Km da percorrere:', userKm);
+
+// - 3 Chiediamo all'utente l'età
+const 
