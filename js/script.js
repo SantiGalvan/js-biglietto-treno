@@ -31,7 +31,7 @@ let price = userKm * 0.21;
 console.log('Il prezzo del biglietto è di: ', price, '€');
 
 // - 5 Controllo se l'utente ha scritto solo numeri
-if (isNaN(userAge) || isNaN(userKm)) {
+if (isNaN(userAge) || isNaN(userKm) || userAge <= 0 || userKm <= 0) {
     alert('Devi inserire un numero')
 } else {
 
