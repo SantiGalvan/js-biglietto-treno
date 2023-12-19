@@ -32,7 +32,7 @@ console.log('Il prezzo del biglietto è di: ', price, '€');
 
 // - 5 Controllo se l'utente ha scritto solo numeri
 if (isNaN(userAge) || isNaN(userKm) || userAge <= 0 || userKm <= 0) {
-    alert('Devi inserire un numero')
+    alert('Devi inserire un dato corretto')
 } else {
 
     // - 6 Controllo se l'utente ha diritto a uno sconto
